@@ -1,5 +1,4 @@
 <img src="yahtzee.png"/>
-# Yahtzee-APCSA
 This is my Yahtzee project for AP Computer Sciences A
 
 ## Running this game
