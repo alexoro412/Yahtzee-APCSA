@@ -1,3 +1,4 @@
+<img src="yahtzee.png"/>
 # Yahtzee-APCSA
 This is my Yahtzee project for AP Computer Sciences A
 
@@ -5,3 +6,4 @@ This is my Yahtzee project for AP Computer Sciences A
  - clone and ```cd``` into this repository
  - ``` javac *.java ```
  - ``` java YahtzeeDriver ```
+ - play Yahtzee
