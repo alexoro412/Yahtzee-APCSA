@@ -228,7 +228,60 @@ public class YahtzeeScorecard
 			return false;
 		}else{
 			YahtzeeSortDice sort = new YahtzeeSortDice(die1,die2,die3,die4,die5);
-			if((sort.getFirst() == sort.getSecond() && sort.getSecond() != sort.getThird() && sort.getThird() == sort.getFourth() && sort.getFourth() == sort.getFifth()) || (sort.getFirst() == sort.getSecond() && sort.getSecond() == sort.getThird() && sort.getThird() != sort.getFourth() && sort.getFourth() == sort.getFifth())){
+
+			int numOnes = 0;
+			int numTwos = 0;
+			int numThrees = 0;
+			int numFours = 0;
+			int numFives = 0;
+			int numSixes = 0;
+
+			switch(sort.getFirst()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+			switch(sort.getSecond()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+
+			switch(sort.getThird()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+			switch(sort.getFourth()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+			switch(sort.getFifth()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+
+
+
+			if((sort.getFirst() == sort.getSecond() && sort.getThird() == sort.getFourth() && sort.getFourth() == sort.getFifth()) || (sort.getFirst() == sort.getSecond() && sort.getSecond() == sort.getThird() && sort.getFourth() == sort.getFifth())){
+			//if( (numOnes >= 2 || numTwos >= 2 || numThrees >= 2 || numFours >= 2 || numFives >= 2) && (numOnes >= 3 || numTwos >= 3 || numThrees >= 3 || numFours >= 3 || numFives >= 3)){
 				this.fullHouse = 25;
 				return true;
 			}else{
@@ -251,7 +304,65 @@ public class YahtzeeScorecard
 			return false;
 		}else{
 			YahtzeeSortDice sort = new YahtzeeSortDice(die1,die2,die3,die4,die5);
-			if((sort.getFirst() == (sort.getSecond()-1) && sort.getSecond() == (sort.getThird()-1) && sort.getThird() == (sort.getFourth()-1)) || (sort.getSecond() == (sort.getThird()-1) && sort.getThird() == (sort.getFourth()-1) && sort.getFourth() == (sort.getFifth()-1))){
+			//System.out.println(sort.getFirst() + ", " + sort.getSecond() + ", " + sort.getThird() + ", " + sort.getFourth() + ", " + sort.getFifth());
+			//System.out.println((sort.getSecond()-1) + ", " + (sort.getThird()-1) + ", " + (sort.getFourth()-1) + ", " + (sort.getFifth()-1));
+			//if(((sort.getFirst() == (sort.getSecond()-1)) && (sort.getSecond() == (sort.getThird()-1)) && (sort.getThird() == (sort.getFourth()-1))) || ((sort.getSecond() == (sort.getThird()-1)) && (sort.getThird() == (sort.getFourth()-1)) && (sort.getFourth() == (sort.getFifth()-1)))){
+			//System.out.println(sort.getThird() == (sort.getFourth()-1));
+			//System.out.println(sort.getThird() + " == " + (sort.getFourth()-1));
+			int numOnes = 0;
+			int numTwos = 0;
+			int numThrees = 0;
+			int numFours = 0;
+			int numFives = 0;
+			int numSixes = 0;
+
+			switch(sort.getFirst()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+			switch(sort.getSecond()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+
+			switch(sort.getThird()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+			switch(sort.getFourth()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+			switch(sort.getFifth()){
+				case 1: numOnes++; break;
+				case 2: numTwos++; break;
+				case 3: numThrees++; break;
+				case 4: numFours++; break;
+				case 5: numFives++; break;
+				case 6: numSixes++; break;
+			}
+
+			//if( ((sort.getSecond() == sort.getThird()-1) && (sort.getThird() == sort.getFourth()-1)) && ((sort.getFirst() == sort.getSecond()-1) || (sort.getFourth() == sort.getFifth()-1))){
+			if( (numOnes > 0 && numTwos > 0 && numThrees > 0 && numFours > 0) || (numTwos > 0 && numThrees > 0 && numFours > 0 && numFives > 0)){
+
+			//if(((sort.getSecond() == (sort.getThird()-1) && sort.getThird() == (sort.getFourth()-1))) && (sort.getFirst() == (sort.getSecond()-1) || sort.getFourth() == (sort.getFifth()-1))){
+			//if( ( (sort.getFirst()<sort.getSecond()) ) || ( ) ){
 				this.smStraight = 30;
 				return true;
 			}else{
